@@ -1,0 +1,7 @@
+html, body, li, ul , div, span {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  cursor: default;
+}

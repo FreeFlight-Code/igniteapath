@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya|Open+Sans+Condensed:300|Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+/************          Variables         ***************/
+
+
+:root {
+  --c-green: #6F934C;
+  --c-yellow: #E5B642;
+  --background: var(--primary);
+  --black: #020402;
+  --red: #AF3236;
+  --text-primary: #020402;
+  --text-secondary: white;
+  --text-primary-hover: rgb(54, 54, 54);
+  --text-secondary-hover: #b9b9b9;
+  --primary: whitesmoke;
+  --primary-hover: rgba(192, 192, 192, 0.8);
+  --secondary: rgb(109, 11, 11);
+  --secondary-hover: rgb(100, 41, 41);
+  --header-height: 60px;
+  --footer-height: 40px;
+}
+
+/************          Global Styling         ***************/
+
+html, body{
+  color: var(--text-primary);
+}
+ul{
+  display: inline;
+}
+input{
+  font-size: 1em;
+}
+.hidden{
+  display: none;
+}
+a, li{
+  list-style-type: none;
+  text-decoration: none;
+}
+:visited{
+  color: var(--text-primary);
+}
+li:hover{
+  /* color: var(--text-primary-hover) */
+}
+
+/************          Styling for custom components         ***************/
+
+
+
+
+button1{
+  color: var(--c-white);
+  background-color: var(--secondary);
+  border-radius: 25px;
+  padding: .5em 2em;
+  border: none;
+}
+
+button1:hover{
+  background-color: var(--secondary-hover);
+  box-shadow:0 3px 11px -2px black;
+}

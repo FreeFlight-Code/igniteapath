@@ -1,0 +1,30 @@
+ .FooterFrame{
+    box-sizing: border-box;
+    height: var(--footer-height);
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+ }
+ .FooterFrame:hover .FooterContainer{
+     opacity: 1;
+ }
+
+ .FooterContainer{
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--background);
+    height: 100%;
+    width: 100%;
+    border-top: 3px solid black;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    opacity: 0;
+}
+
+img{
+    height: 100%;
+}

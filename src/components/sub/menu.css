@@ -1,0 +1,32 @@
+ul.nav{
+  display: flex;
+  align-items: center;
+  position: relative;
+  /* top: 15px; */
+}
+ul.nav li{
+  padding: 14px 26px;
+  position: relative;
+  /* top: 0; */
+  /* height: 100%; */
+}
+ul.nav > li:hover{
+    background-color: var(--primary-hover);
+    /* color: var(--text-secondary) */
+
+}
+.subMenu{
+    position: absolute;
+    background-color: var(--primary-hover);
+    right: 0px;
+    top: calc(var(--header-height) - .95em);
+    display: none;
+    width: max-content;
+}
+.subMenu li:hover{
+    background-color: var(--primary);
+    border: 1px solid gray;
+}
+ul.nav > li:hover .subMenu{
+    display: block;
+}

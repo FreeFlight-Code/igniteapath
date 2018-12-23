@@ -1,0 +1,29 @@
+#leftMenuContainer{
+    padding: 20px 50px 20px 0;
+    position: absolute;
+    left: -250px;
+    top: 5vh;
+    width:90vw;
+    max-width: 250px;
+    background-color: gray;
+    height: fit-content;
+    /* min-height: 80vh; */
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+#leftMenuContainer span{
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
+#leftMenuContainer:hover{
+    left: 0;
+}
+#leftMenuContainer div{
+    padding: 18px 50px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+#leftMenuContainer div:hover{
+background-color: white;
+}

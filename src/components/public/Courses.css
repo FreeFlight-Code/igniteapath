@@ -1,0 +1,25 @@
+#CoursesContainer{
+    box-sizing: border-box;
+    padding: 10px;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+#CoursesContainer h1{
+    text-align: center;
+}
+.courseContainer{
+    padding: 5px 20px;
+    background-color: red;
+    margin: 10px 0;
+    height: 200px;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+}
+.descriptionContainer{
+    padding: 20px;
+}
+.courseContainer:hover{
+    background-color: grey;
+}

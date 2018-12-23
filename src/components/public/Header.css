@@ -1,0 +1,31 @@
+ .HeaderContainer{
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--background);
+    height: var(--header-height);
+    width: 100%;
+    box-shadow: 0 -15px 16px 10px black;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+ .HeaderFrame{
+    box-sizing: border-box;
+    width:100%;
+    height: var(--header-height);
+    position: fixed;
+    top: 0;
+    left: 0;
+ }
+ .HeaderFrame .HeaderContainer{
+     opacity: 0;
+ }
+ .HeaderFrame:hover .HeaderContainer{
+     opacity: 1;
+ }
+
+img{
+    height: 100%;
+}
