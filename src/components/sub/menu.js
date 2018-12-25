@@ -13,7 +13,7 @@ export default class menu extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            menuArray: [
+            menu: [
                 {title:"test-home",
                     link: [
                         {title:"test-secure werf wqef qwefwqe wqerr wqe ", link:"/#/secure"},
@@ -30,10 +30,8 @@ export default class menu extends React.Component {
 
 
     componentWillMount() {
-        let {
-            menuArray
-        } = this.props;
-        if(menuArray)this.setState({menuArray});
+        let { menu } = this.props;
+        if(menu)this.setState({ menu });
     }
 
     navigateClick(e, liElement, index){
@@ -59,8 +57,8 @@ export default class menu extends React.Component {
     }
 
     renderMenu(){
-        const {menuArray} = this.state;
-        return (menuArray.map((liElement, index)=>{
+        const {menu} = this.state;
+        return (menu.map((liElement, index)=>{
             return (
                     <li onClick={e=>{this.navigateClick(e, liElement, index)}} key={`menu-li-${index}`}>{liElement.title}
                         {this.subMenu(liElement, index)}

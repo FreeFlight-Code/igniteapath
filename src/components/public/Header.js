@@ -20,11 +20,11 @@ export default class Header extends Component {
     render() {
         return (
             <div className='HeaderFrame'>
-                <span><img src={upArrowIcon}></img></span>
+                <span><img className='uparrowicon' alt='uparrow icon' src={upArrowIcon}></img></span>
                 <div className='HeaderContainer'>
-                    <img alt='logo'src={logo}></img>
+                    <img alt='igniteapath logo' src={logo}></img>
                     < Menu
-                    menuArray={[
+                    menu={[
                         {title:"SITE MAP",
                             link: [
                                 {title:"home", link:"/#/"},

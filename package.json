@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "main": "./server/index",
-  "homepage": "http://FreeFlight-Code.github.io/igniteapath",
+  "homepage": "http://freeflight-code.github.io/igniteapath",
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",

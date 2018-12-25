@@ -16,11 +16,10 @@ export default class Home extends Component {
     }
 
     render() {
-        const height = window.innerHeight - 90;
-        const width = "98%";
+
         return (
             <div className='HomeContainer'>
-                <iframe title="mainVideo" width={width} height={height} src="https://www.youtube.com/embed/XFPaiMO4gVQ" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                <iframe title="mainVideo" style={this.iframeStyle} src="https://www.youtube.com/embed/XFPaiMO4gVQ?autoplay=1" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                     < Header loggedin={this.props.loggedin} />
                 < Footer />
             </div>

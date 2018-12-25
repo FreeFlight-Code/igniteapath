@@ -5,10 +5,10 @@ ul.nav{
   /* top: 15px; */
 }
 ul.nav li{
-  padding: 14px 26px;
+  padding: 20px 26px;
   position: relative;
-  /* top: 0; */
-  /* height: 100%; */
+  text-align: center;
+  height: 100%;
 }
 ul.nav > li:hover{
     background-color: var(--primary-hover);
@@ -19,7 +19,7 @@ ul.nav > li:hover{
     position: absolute;
     background-color: var(--primary-hover);
     right: 0px;
-    top: calc(var(--header-height) - .95em);
+    top: calc(var(--header-height));
     display: none;
     width: max-content;
 }

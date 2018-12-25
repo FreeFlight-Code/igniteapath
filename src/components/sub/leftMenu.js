@@ -11,15 +11,22 @@ class leftMenu extends Component {
 
 
     render() {
-        console.log(this.state)
+        const menu = this.props.menu || [
+            {title: 'Profile', link: '/#/secure/account'},
+            {title: 'Billing', link: '/#/secure/account/billing'},
+            {title: 'My Paths', link: '/#/secure/account'},
+            {title: 'Extra', link: '/#/Extra'},
+            {title: 'Blog', link: '/#/Blog'},
+        ]
+        const renderMenu = _=>{
+            return menu.map((el, i)=>{
+                return <div key={`leftmenu-div-${i}`}onClick={e=>{window.location = el.link}}>{el.title}</div>
+            })
+        }
         return (
             <aside id = 'leftMenuContainer'>
                 <span>Menu</span>
-                <div>Profile</div>
-                <div>Billing</div>
-                <div>My Paths</div>
-                <div>Extra</div>
-                <div>Comments</div>
+                {renderMenu()}
             </aside>
         );
     }

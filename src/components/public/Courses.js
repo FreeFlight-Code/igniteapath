@@ -18,6 +18,7 @@ class Courses extends Component {
             selectedCourse: {},
             showDetailModal: false
         }
+        this.toggleShowDetailModal = this.toggleShowDetailModal.bind(this);
     }
 
     componentWillMount() {
@@ -25,6 +26,17 @@ class Courses extends Component {
         if(!this.props.courses.length){
             this.setState({courses: data})
         }
+    }
+    clipDescription (description){
+        if (description.length>320){return description.slice(0, 320) + '...'}
+        return description;
+    }
+
+    toggleShowDetailModal(){
+        const value = !this.state.showDetailModal
+        this.setState({
+            showDetailModal: value
+        })
     }
 
 
@@ -46,20 +58,22 @@ class Courses extends Component {
                     ></img>
                     <div className='descriptionContainer'>
                         <h3>{el.title.toUpperCase()}</h3>
-                        <p>{el.description}</p>
+                        <p>{this.clipDescription(el.description)}</p>
                     </div>
                 </div>
             )
         })
 
-        return (
+        if (!this.state.showDetailModal) return (
             <div id = 'CoursesContainer'>
-                {this.state.showDetailModal && < CourseDetail course={this.state.selectedCourse}/>}
                 < Header />
                 <h1>Ignite YOUR Path Courses</h1>
                 {coursesList}
             </div>
         );
+        if(this.state.showDetailModal) return (
+            < CourseDetail course={this.state.selectedCourse} closeModal={this.toggleShowDetailModal}/>
+        )
     }
 }
 

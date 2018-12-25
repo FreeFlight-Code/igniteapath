@@ -10,14 +10,20 @@
     /* min-height: 80vh; */
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
+    animation-name: leftMenuClose;
+    animation-duration: .3s;
+    animation-timing-function: ease-in-out;
 }
 #leftMenuContainer span{
     position: absolute;
-    right: 0;
+    right: 5px;
     top: 50%;
 }
 #leftMenuContainer:hover{
     left: 0;
+    animation-name: leftMenu;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
 }
 #leftMenuContainer div{
     padding: 18px 50px;

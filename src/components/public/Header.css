@@ -19,11 +19,19 @@
     top: 0;
     left: 0;
  }
+ .HeaderFrame > span{
+     margin: 0 0 0 43vw;
+ }
+  .HeaderFrame .uparrowicon{
+     height: 50%;
+ }
  .HeaderFrame .HeaderContainer{
-     opacity: 0;
+     top: -200px;
  }
  .HeaderFrame:hover .HeaderContainer{
-     opacity: 1;
+     animation-name: navMenu;
+     animation-duration: 700ms;
+     animation-fill-mode: forwards;
  }
 
 img{

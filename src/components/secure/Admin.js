@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import LeftMenu from '../sub/leftMenu';
 
 import './Admin.css';
 
@@ -14,6 +15,7 @@ class Admin extends Component {
         return (
             <div id = 'AdminContainer'>
                Admin
+               < LeftMenu menu={[{title: 'courses', link: '/#/secure/admin/courses'}, {title: 'blog', link: '/#/secure/admin/blog'}]}/>
             </div>
         );
     }

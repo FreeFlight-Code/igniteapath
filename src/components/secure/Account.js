@@ -14,8 +14,8 @@ class Account extends Component {
 
         return (
             <div id = 'AccountContainer'>
-                < LeftMenu />
                 Account View
+                < LeftMenu />
             </div>
         );
     }

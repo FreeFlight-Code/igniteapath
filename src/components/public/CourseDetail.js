@@ -18,12 +18,15 @@ class CourseDetail extends Component {
     }
 
 
+
     render() {
         console.log(this.state)
         return (
-            <div id = 'CourseDetailContainer'>
-               <h1>{this.state.course.title}</h1>
-               <a href="../../images/burger.jpg" download="burgertime">download</a>
+            <div id = 'CourseDetailContainer' style={{ backgroundImage: `url(${this.state.course.thumbnail})` }}>
+                <span className='closeModal' onClick={e=>{console.log('hello');this.props.closeModal()}}>X</span>
+                <h1>{this.state.course.title}</h1>
+                <p>{this.state.course.description}</p>
+                <a href="../../images/burger.jpg" download="burgertime">download</a>
             </div>
         );
     }
