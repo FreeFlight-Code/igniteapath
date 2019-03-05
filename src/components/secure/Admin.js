@@ -15,7 +15,12 @@ class Admin extends Component {
         return (
             <div id = 'AdminContainer'>
                Admin
-               < LeftMenu menu={[{title: 'courses', link: '/#/secure/admin/courses'}, {title: 'blog', link: '/#/secure/admin/blog'}]}/>
+               < LeftMenu menu={[
+                   {title: 'Home', link: '/'},
+                   {title: 'Admin Home', link: '/#/secure/admin'},
+                   {title: 'Courses', link: '/#/secure/admin/courses'},
+                   {title: 'Blog', link: '/#/secure/admin/blog'}
+                ]}/>
             </div>
         );
     }

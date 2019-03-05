@@ -1,29 +1,34 @@
 import React, { Component } from 'react';
 import { Switch, HashRouter, Route } from 'react-router-dom';
 import Admin from './Admin';
-import Account from './Account';
-import Unauthorized from '../public/Unauthorized';
+import Courses from '../public/Paths';
+import CourseDetail from '../public/PathDetail';
+import Blog from '../public/Blog';
 import FourOhFour from '../public/FourOhFour';
+import Account from './Account';
 
 export default class Secure extends Component {
 
   isLoggedIn(){
-    const currentLocation = window.location;
-    //check store to see if logged in
-    //if admin route to /secure/admin
-    //if user route to /secure/accout
-    //else route to /#/unauthorized
-    window.location=currentLocation;
+    let admin, user;
+    admin = true;
+    user = true;
+    console.log(admin)
+    if (admin) window.location = '/#/secure/admin';
+    else if (user) window.location = '/#/secure/account';
+    else window.location = '/#/unauthorized'
   }
 
   render() {
-    this.isLoggedIn();
+    // this.isLoggedIn();
     return (
       <HashRouter>
         <Switch>
-          <Route component={ Admin } path='/secure/admin' />
-          <Route component={ Account } path='/secure/account' />
-          <Route component={ Unauthorized } path='/unauthorized' />
+          <Route component={ Courses } path='/secure/admin/courses' />
+          <Route component={ CourseDetail } path='/secure/admin/course/:id' />
+          <Route component={ Blog } path='/secure/admin/blog' />
+          <Route component={ Admin } exact path='/secure/admin' />
+          <Route component={ Account } exact path='/secure/account' />
           <Route component={ FourOhFour } path='/' />
         </Switch>
       </HashRouter>

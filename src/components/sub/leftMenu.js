@@ -15,8 +15,8 @@ class leftMenu extends Component {
             {title: 'Profile', link: '/#/secure/account'},
             {title: 'Billing', link: '/#/secure/account/billing'},
             {title: 'My Paths', link: '/#/secure/account'},
-            {title: 'Extra', link: '/#/Extra'},
-            {title: 'Blog', link: '/#/Blog'},
+            {title: 'Extra', link: '/#/extra'},
+            {title: 'Blog', link: '/#/blog'},
         ]
         const renderMenu = _=>{
             return menu.map((el, i)=>{

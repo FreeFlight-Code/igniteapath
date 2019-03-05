@@ -14,3 +14,7 @@
   from {top: 0px;}
   to {top: -250px;}
 }
+@keyFrames menu_highlight {
+  from {background-color: var(--background);}
+  to {background-color: var(--primary-hover);}
+}

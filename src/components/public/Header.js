@@ -2,41 +2,23 @@ import React, { Component } from 'react';
 import Menu from '../sub/menu';
 import './Header.css';
 import logo from '../../images/logo-for-website-1-e1536267500497.png';
-import upArrowIcon from '../../images/Arrow_Top.png';
-
 
 export default class Header extends Component {
-    // constructor(props){
-    //     super(props)
-    // }
-
-
-    login (){
-        return (
-            this.props.loggedin ? {title:"LOG OUT", link:"/#/"} : {title:"MY COURSES", link:"/#/login"}
-        )
-    }
 
     render() {
         return (
-            <div className='HeaderFrame'>
-                <span><img className='uparrowicon' alt='uparrow icon' src={upArrowIcon}></img></span>
-                <div className='HeaderContainer'>
-                    <img alt='igniteapath logo' src={logo}></img>
-                    < Menu
-                    menu={[
-                        {title:"SITE MAP",
-                            link: [
-                                {title:"home", link:"/#/"},
-                                {title:"login", link:"/#/login"},
-                                {title:"all courses", link:"/#/courses"},
-                                {title: 'blog', link: '/#/blog'}
-                            ]
-                        },
-                        {title:"ALL COURSES", link:"/#/courses"},
-                        this.login()
-                    ]}/>
-                </div>
+            <div className='HeaderContainer'>
+              <img className='logo' alt='igniteapath logo' src={logo}></img>
+              < Menu
+                  menu={[
+                      {title:"about", link:"/#/about"},
+                      {title:'new? start here', link:'/#/'},
+                      this.props.loggedin ? {title:"my paths", link:"/#/secure/account/paths"} : {title:"masterclasses", link:"/#/paths"},
+                      {title:'blog', link:'/#/blog'},
+                      { title: 'contact', link: '/#/contact'},
+                      this.props.loggedin ? { title: "my account", link: "/#/secure/account" } : { title: "login", link: "/#/login" }
+                  ]}
+              />
             </div>
         )
     }

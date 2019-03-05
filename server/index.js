@@ -20,6 +20,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static(__dirname + '/../build'));
+app.use(express.static(__dirname + '/../src/images'));
 
 massive({
   host: process.env.DB_HOST,

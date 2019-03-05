@@ -15,7 +15,12 @@ class Account extends Component {
         return (
             <div id = 'AccountContainer'>
                 Account View
-                < LeftMenu />
+                < LeftMenu menu={[
+                    {title: 'Profile', link: '/#/secure/account'},
+                    {title: 'Billing', link: '/#/secure/account/billing'},
+                    {title: 'My Paths', link: '/#/secure/account'},
+                    {title: 'Blog', link: '/#/blog'},
+                ]}/>
             </div>
         );
     }

@@ -1,39 +1,12 @@
- .HeaderContainer{
-    box-sizing: border-box;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: var(--background);
-    height: var(--header-height);
-    width: 100%;
-    box-shadow: 0 -15px 16px 10px black;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 20px;
+.HeaderContainer{
+    color: var(--text-primary);
+    position: relative;
+    padding: 25px 15px 10px;
 }
- .HeaderFrame{
-    box-sizing: border-box;
-    width:100%;
-    height: var(--header-height);
-    position: fixed;
-    top: 0;
-    left: 0;
- }
- .HeaderFrame > span{
-     margin: 0 0 0 43vw;
- }
-  .HeaderFrame .uparrowicon{
-     height: 50%;
- }
- .HeaderFrame .HeaderContainer{
-     top: -200px;
- }
- .HeaderFrame:hover .HeaderContainer{
-     animation-name: navMenu;
-     animation-duration: 700ms;
-     animation-fill-mode: forwards;
- }
 
-img{
-    height: 100%;
+.HeaderContainer .logo{
+    height: 50px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
 }

@@ -1,6 +1,6 @@
 .loginContainer{
-    background-position: top right;
-    background-image: url(https://cdn.pixabay.com/photo/2016/12/20/22/09/beach-1921598_1280.jpg);
+    background-position: top left;
+    background-image: url(https://cdn.shopify.com/s/files/1/1726/6115/articles/yoga_inner_peace_2048x.jpg?v=1515268582);
     background-size: cover;
     height: 100vh;
     width: 100%;
@@ -13,8 +13,15 @@
     padding: 30px 50px;
     margin: 30vh auto;
     width: 90%;
+    max-width: 500px;
     background-color: var(--primary-hover)
 }
 .smallLoginModal img{
     width: 40px;
+}
+
+@media only screen and (max-width: 750px) {
+    .loginContainer{
+        background-size: contain;
+    }
 }

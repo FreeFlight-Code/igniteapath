@@ -1,0 +1,27 @@
+#PathsContainer{
+    box-sizing: border-box;
+    padding: 30px 10px 10px;
+    width: 100%;
+    min-height: 100vh;
+}
+
+#PathsContainer h1{
+    text-align: center;
+}
+.pathContainer{
+    padding: 5px 20px;
+    background-color: var(--primary);
+    margin: 10px 0;
+    height: 200px;
+    cursor: pointer;
+    display: flex;
+}
+
+.descriptionContainer{
+    padding: 20px;
+    width: 80%;
+    overflow: hidden;
+}
+.pathContainer:hover{
+    background-color: var(--primary-hover);
+}
