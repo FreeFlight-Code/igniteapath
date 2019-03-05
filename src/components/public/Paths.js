@@ -3,7 +3,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import getPaths from '../../ducks/paths';
-import data from '../../config/paths_test.json';
 
 import Header from './Header';
 import PathDetail from './PathDetail';
@@ -23,8 +22,8 @@ class Paths extends Component {
 
     componentWillMount() {
         // load test data
-        if(!this.props.paths.length){
-            this.setState({paths: data})
+        if(this.props.paths.length){
+            this.setState({paths: this.props.paths})
         }
     }
     clipDescription (description){
@@ -79,7 +78,7 @@ class Paths extends Component {
 }
 
 const mapStateToProps = (state) => {
-    const {paths} = state;
+    const {paths} = state.paths;
     return {
         paths
     }

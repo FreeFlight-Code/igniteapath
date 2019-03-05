@@ -10,6 +10,8 @@ import Blog from './components/public/Blog';
 import Unauthorized from './components/public/Unauthorized';
 import FourOhFour from './components/public/FourOhFour';
 
+import getUserInfo from './ducks/user';
+
 
 class App extends Component {
     constructor (props) {
@@ -19,6 +21,8 @@ class App extends Component {
       }
     }
   render() {
+    // this.props.getUserInfo();
+    console.log(this.props)
     return (
       <HashRouter>
         <Switch>
@@ -26,7 +30,7 @@ class App extends Component {
           <Route render={props => <Login {...props} loggedin={this.state.loggedin} />} path='/login' />
           <Route render={props => <Blog {...props} loggedin={this.state.loggedin} />} path='/blog' />
           <Route render={props=><Home {...props} loggedin={this.state.loggedin}/>} path='/' exact />
-          <Route render={props => <Unauthorized {...props} />} path='/unauthorized' />
+          <Route function={< Unauthorized />} path='/unauthorized' />
           <Route render={props=>this.state.loggedin ? <Secure {...props} loggedin={this.state.loggedin}/> : <Unauthorized/>} path='/secure' />
           <Route component={ FourOhFour } path='/' />
         </Switch>
@@ -36,12 +40,16 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => {
+  const {user, loading, paths} = state;
     return {
+      user,
+      loading,
+      paths
     }
 }
 
 const mapDispatchToProps = {
-
+  getUserInfo
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

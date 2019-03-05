@@ -1,17 +1,8 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React from 'react';
 
-class Unauthorized extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            authPrivilege: 'unspecified'
-        }
-    }
+export default function() {
 
-
-    render() {
-      const { authPrivilege } = this.state;
+      const { authPrivilege } = 'unknown';
       setTimeout(
         function (){
           window.location.assign('/#/')
@@ -19,20 +10,8 @@ class Unauthorized extends Component {
       , 4000);
       return (
         <div id='UnauthorizedContainer'>
-          You are not authorized to view that page you only have <span>{`${authPrivilege}`} privileges.</span>
-          You will be redirected to the home page in 3 seconds.
-            </div>
+          <div>You are not authorized to view that page you only have <span>{`${authPrivilege}`} privileges.</span></div>
+          <div>You will be redirected to the home page in 3 seconds.</div>
+        </div>
       );
-    }
 }
-
-const mapStateToProps = (state) => {
-    return {
-    }
-}
-
-const mapDispatchToProps = {
-
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Unauthorized);

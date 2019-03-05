@@ -3,56 +3,63 @@
         "title": "Paths To a Peaceful Mind",
         "description": "test data sample field fdgdfg dfg dsg  dfs g dfs g dsf g dsfgsdf g",
         "videoLink": "https://www.youtube.com/embed/118Sm5GQxPQ",
-        "thumbnail": "https://yt3.ggpht.com/a-/AN66SAzK8TNOPyiFfeKf-9XM1uWGuDI7iX0BxuHJnA=s88-mo-c-c0xffffffff-rj-k-no",
+        "thumbnail": "https://i0.wp.com/www.igniteapath.com/wp-content/uploads/2018/08/mind-thumbnail-2.png?w=183&ssl=1",
         "price": 97
     },
     {
         "title": "Paths to a Strong Body",
         "description": "test data sample field test data sample field test data sample field test data sample field test data sample field test data sample field test data sample field test data sample field test data sample field test data sample field test data sample field test data sample field test data sample fieldtest data sample fieldtest data sample fieldtest data sample fieldtest data sample fieldtest data sample fieldtest data sample field",
         "videoLink": "https://www.youtube.com/embed/118Sm5GQxPQ",
-        "thumbnail": "https://yt3.ggpht.com/a-/AN66SAzK8TNOPyiFfeKf-9XM1uWGuDI7iX0BxuHJnA=s88-mo-c-c0xffffffff-rj-k-no",
+        "thumbnail": "https://i0.wp.com/www.igniteapath.com/wp-content/uploads/2018/08/body-thumbnail-1.png?w=183&ssl=1",
         "price": 97
     },
     {
         "title": "Paths to a Beautiful Soul",
         "description": "test data sample field test data sample fieldtest data sample field",
         "videoLink": "https://www.youtube.com/embed/118Sm5GQxPQ",
-        "thumbnail": "https://yt3.ggpht.com/a-/AN66SAzK8TNOPyiFfeKf-9XM1uWGuDI7iX0BxuHJnA=s88-mo-c-c0xffffffff-rj-k-no",
+        "thumbnail": "https://i0.wp.com/www.igniteapath.com/wp-content/uploads/2018/08/soul-thumbnail-1.png?w=183&ssl=1",
         "price": 97
     },
     {
         "title": "Paths to a Powerful Personality",
         "description": "test data sample field test data sample fieldtest data sample fieldtest data sample fieldtest data sample field",
         "videoLink": "https://www.youtube.com/embed/118Sm5GQxPQ",
-        "thumbnail": "https://yt3.ggpht.com/a-/AN66SAzK8TNOPyiFfeKf-9XM1uWGuDI7iX0BxuHJnA=s88-mo-c-c0xffffffff-rj-k-no",
+        "thumbnail": "https://i2.wp.com/www.igniteapath.com/wp-content/uploads/2018/08/personality-thumbnail-1.png?w=183&ssl=1",
         "price": 97
     },
     {
         "title": "Paths to Relationships",
         "description": "test data sample field test data sample fieldtest data sample fieldtest data sample fieldtest data sample field",
         "videoLink": "https://www.youtube.com/embed/118Sm5GQxPQ",
-        "thumbnail": "https://yt3.ggpht.com/a-/AN66SAzK8TNOPyiFfeKf-9XM1uWGuDI7iX0BxuHJnA=s88-mo-c-c0xffffffff-rj-k-no",
+        "thumbnail": "https://i2.wp.com/www.igniteapath.com/wp-content/uploads/2018/08/relationships-thumbnail.png?w=183&ssl=1",
         "price": 97
     },
     {
         "title": "Paths to Balance & Purpose",
         "description": "test data sample field test data sample fieldtest data sample fieldtest data sample fieldtest data sample field",
         "videoLink": "https://www.youtube.com/embed/118Sm5GQxPQ",
-        "thumbnail": "https://yt3.ggpht.com/a-/AN66SAzK8TNOPyiFfeKf-9XM1uWGuDI7iX0BxuHJnA=s88-mo-c-c0xffffffff-rj-k-no",
+        "thumbnail": "https://i0.wp.com/www.igniteapath.com/wp-content/uploads/2018/08/balance-and-purpose-thumbnail-2.png?w=183&ssl=1",
         "price": 97
     },
     {
         "title": "Paths to Exit Fear & Doubt",
         "description": "test data sample field test data sample fieldtest data sample fieldtest data sample fieldtest data sample field",
         "videoLink": "https://www.youtube.com/embed/118Sm5GQxPQ",
-        "thumbnail": "https://yt3.ggpht.com/a-/AN66SAzK8TNOPyiFfeKf-9XM1uWGuDI7iX0BxuHJnA=s88-mo-c-c0xffffffff-rj-k-no",
+        "thumbnail": "https://i0.wp.com/www.igniteapath.com/wp-content/uploads/2018/08/fear-and-doubt-thumbnail-1.png?w=183&ssl=1",
+        "price": 97
+    },
+    {
+        "title": "Paths to Full Ignite a Path Course",
+        "description": "test data sample field test data sample fieldtest data sample fieldtest data sample fieldtest data sample field",
+        "videoLink": "https://www.youtube.com/embed/118Sm5GQxPQ",
+        "thumbnail": "https://i0.wp.com/www.igniteapath.com/wp-content/uploads/2018/08/ignite-a-path-course-thumbnail.png?w=183&ssl=1",
         "price": 97
     },
     {
         "title": "Paths to Dissatisfaction",
         "description": "test data sample field test data sample fieldtest data sample fieldtest data sample fieldtest data sample field",
         "videoLink": "https://www.youtube.com/embed/118Sm5GQxPQ",
-        "thumbnail": "https://yt3.ggpht.com/a-/AN66SAzK8TNOPyiFfeKf-9XM1uWGuDI7iX0BxuHJnA=s88-mo-c-c0xffffffff-rj-k-no",
+        "thumbnail": "https://i0.wp.com/www.igniteapath.com/wp-content/uploads/2018/08/dissatisfaction-thumbnail.png?w=183&ssl=1",
         "price": 97
     }
 ]

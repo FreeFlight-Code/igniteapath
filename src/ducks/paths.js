@@ -1,9 +1,9 @@
 import axios from 'axios';
-// import config from '../config/config.json';
+import pathConfig from '../config/paths_test.json';
 
 // Set up initial state
 const initialState = {
-    PATHs:[],
+    paths:pathConfig,
     focusedItem: {}
 };
 
@@ -14,26 +14,9 @@ const ADD_PATH = 'ADD_PATH';
 const EDIT_PATH = 'EDIT_PATH';
 const DELETE_PATH = 'DELETE_PATH';
 
-// const testingBool = config.testing_env;
-
-// const getData = ()=>{
-//     console.log(testingBool)
-//     return new Promise((resolve, reject)=>{
-//         try {
-//             if(testingBool){
-
-//             } else {
-
-//             }
-//         } catch (error){
-
-//         }
-//     })
-// }
-
 // action creators
-export function getpaths() {
-    const paths = axios.get('/api/allpaths')
+export function getPaths() {
+    const paths = axios.get('/api/allPaths')
         .then(res => {
         return res.data
         })
@@ -44,23 +27,23 @@ export function getpaths() {
     }
 }
 
-export function getPATH(id) {
-    const PATH = axios.get('/api/PATH/' + id).then(res => {
+export function getPath(id) {
+    const path = axios.get('/api/path/' + id).then(res => {
         return res.data[0];
     })
     return {
         type: GET_PATH,
-        payload: PATH
+        payload: path
     }
 }
 
-export function addPATH(obj) {
-    axios.post('/api/PATH', obj)
+export function addPath(obj) {
+    axios.post('/api/path', obj)
         .then(res => {
-            alert('PATH added')
+            alert('Path added')
         })
         .catch( err => {
-            alert('unable to add PATH', obj, err)
+            alert('unable to add Path', obj, err)
         } );
     return {
         type: ADD_PATH,
@@ -68,10 +51,10 @@ export function addPATH(obj) {
     }
 }
 
-export function editPATH(obj) {
-    axios.put('/api/PATH/', obj)
+export function editPath(obj) {
+    axios.put('/api/path/', obj)
         .then(_ => {
-            console.log('PATH edited');
+            console.log('Path edited');
         })
         .catch(() => {
             alert(`We're sorry but ${obj.name} was NOT able to be edited...`)
@@ -82,10 +65,10 @@ export function editPATH(obj) {
     }
 }
 
-export function deletePATH(id) {
-    axios.delete('/api/PATH/' + id)
+export function deletePath(id) {
+    axios.delete('/api/path/' + id)
         .then(() => {
-            console.log('item deleted from database')
+            console.log('path deleted from database')
 
         })
         .catch(() => {
@@ -101,13 +84,13 @@ export function deletePATH(id) {
 
 
 // reducer function
-export default function PATHReducer(state = initialState, action) {
+export default function pathReducer(state = initialState, action) {
     let newState = Object.assign({}, state);
     switch (action.type) {
 
         case GET_PATHS + '_FULFILLED':
         //payload = array of objects
-            newState.PATHs = action.payload;
+            newState.paths = action.payload;
             break;
 
         case GET_PATH + '_FULFILLED':
@@ -117,23 +100,23 @@ export default function PATHReducer(state = initialState, action) {
 
         case ADD_PATH + '_FULFILLED':
             //action.payload = edited object
-            newState.PATHs.unshift(action.payload)
+            newState.paths.unshift(action.payload)
             break;
 
         case EDIT_PATH + '_FULFILLED':
         //action.payload = edited object
-            let index = newState.PATHs.findIndex(el => {
+            let index = newState.paths.findIndex(el => {
                 return el.id === action.payload.id;
             })
-            newState.PATHs = Object.assign([], [...newState.PATHs.slice(0, index), action.payload, ...newState.PATHs.slice(index + 1)]);
+            newState.paths = Object.assign([], [...newState.paths.slice(0, index), action.payload, ...newState.paths.slice(index + 1)]);
             break;
 
         case DELETE_PATH + '_FULFILLED':
             //payload = id
-            index = newState.PATHs.findIndex(el => {
+            index = newState.paths.findIndex(el => {
                 return el.id === action.payload;
             });
-            newState.PATHs = newState.PATHs.splice(index, 1);
+            newState.paths = newState.paths.splice(index, 1);
             break;
 
         default:
