@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Switch, HashRouter, Route } from 'react-router-dom';
 import Admin from './Admin';
-import Paths from '../public/Paths';
-import PathDetail from '../public/PathDetail';
-import Blog from '../public/Blog';
-import FourOhFour from '../public/FourOhFour';
+import Paths from '../public/PathsPage';
+import PathDetail from '../public/PathDetailPage';
+import Blog from '../public/BlogPage';
+import FourOhFour from '../public/FourOhFourPage';
 import Account from './Account';
 
 export default class Secure extends Component {

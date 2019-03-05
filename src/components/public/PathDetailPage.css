@@ -19,10 +19,10 @@
     opacity: .6;
     z-index: 0;
 }
-#PathDetailContainer .closeModal{
+#PathDetailContainer .close{
     z-index: 20;
     cursor: pointer;
 }
-.closeModal:hover{
+.close:hover{
     color: white;
 }

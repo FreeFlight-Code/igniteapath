@@ -3,8 +3,7 @@ import pathConfig from '../config/paths_test.json';
 
 // Set up initial state
 const initialState = {
-    paths:pathConfig,
-    focusedItem: {}
+    paths: pathConfig
 };
 
 // action types
@@ -93,10 +92,10 @@ export default function pathReducer(state = initialState, action) {
             newState.paths = action.payload;
             break;
 
-        case GET_PATH + '_FULFILLED':
-        //payload = 1 obj
-            newState.focusedItem = action.payload;
-            break;
+        // case GET_PATH + '_FULFILLED':
+        // //payload = 1 obj
+        //     newState.focusedItem = action.payload;
+        //     break;
 
         case ADD_PATH + '_FULFILLED':
             //action.payload = edited object

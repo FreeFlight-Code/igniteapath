@@ -3,44 +3,34 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import getPaths from '../../ducks/paths';
-
 import Header from './Header';
-import PathDetail from './PathDetail';
-
-import './Paths.css';
+import './PathsPage.css';
 
 class Paths extends Component {
-    constructor(props) {
-        super(props);
-        this.state={
-            paths:[],
-            selectedpath: {},
-            showDetailModal: false
-        }
-        this.toggleShowDetailModal = this.toggleShowDetailModal.bind(this);
-    }
 
     componentWillMount() {
         // load test data
         if(this.props.paths.length){
             this.setState({paths: this.props.paths})
         }
+        //TODO if no data do something
     }
+
+    componentDidMount() {
+      // TODO call get paths
+    }
+
+    shouldComponentUpdate(nextProps, nextState, nextContext) {
+       //TODO check if paths have changed
+    }
+
     clipDescription (description){
         if (description.length>320){return description.slice(0, 320) + '...'}
         return description;
     }
 
-    toggleShowDetailModal(){
-        const value = !this.state.showDetailModal
-        this.setState({
-            showDetailModal: value
-        })
-    }
-
-
     render() {
-        const { paths } = this.state;
+        const { paths } = this.props;
         const pathsList = paths.map((el, i)=>{
             return (
                 <div
@@ -48,7 +38,7 @@ class Paths extends Component {
                     key={`path-${i}`}
                     onClick={e=>{
                         e.preventDefault();
-                        this.setState({selectedpath: el, showDetailModal: true})
+                        window.location.assign('/#/paths/' + el.id)
                     }}
                 >
                     <img
@@ -64,16 +54,13 @@ class Paths extends Component {
             )
         })
 
-        if (!this.state.showDetailModal) return (
+        return (
             <div id = 'PathsContainer'>
                 < Header />
                 <h1>Masterclasses</h1>
                 {pathsList}
             </div>
         );
-        if(this.state.showDetailModal) return (
-            < PathDetail path={this.state.selectedpath} closeModal={this.toggleShowDetailModal}/>
-        )
     }
 }
 

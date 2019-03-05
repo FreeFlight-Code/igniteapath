@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import { Switch, HashRouter, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import Paths from './components/public/Paths';
-import Login from './components/public/Login';
+import Paths from './components/public/PathsPage';
+import PathDetail from './components/public/PathDetailPage';
+import Login from './components/public/LoginPage';
 import Secure from './components/secure/Secure';
-import Home from './components/public/Home';
-import Blog from './components/public/Blog';
-import Unauthorized from './components/public/Unauthorized';
-import FourOhFour from './components/public/FourOhFour';
+import Home from './components/public/HomePage';
+import Blog from './components/public/BlogPage';
+import Unauthorized from './components/public/UnauthorizedPage';
+import FourOhFour from './components/public/FourOhFourPage';
 
 import getUserInfo from './ducks/user';
 
@@ -26,6 +27,7 @@ class App extends Component {
     return (
       <HashRouter>
         <Switch>
+          <Route component={PathDetail} path="/paths/:id" />
           <Route render={props => <Paths {...props} loggedin={this.state.loggedin} />} path='/paths' />
           <Route render={props => <Login {...props} loggedin={this.state.loggedin} />} path='/login' />
           <Route render={props => <Blog {...props} loggedin={this.state.loggedin} />} path='/blog' />
@@ -40,11 +42,10 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => {
-  const {user, loading, paths} = state;
+  const {user, loading} = state;
     return {
       user,
-      loading,
-      paths
+      loading
     }
 }
 
