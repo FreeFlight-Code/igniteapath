@@ -20,9 +20,9 @@ class Paths extends Component {
       // TODO call get paths
     }
 
-    shouldComponentUpdate(nextProps, nextState, nextContext) {
-       //TODO check if paths have changed
-    }
+    // shouldComponentUpdate(nextProps, nextState, nextContext) {
+    //    return true;
+    // }
 
     clipDescription (description){
         if (description.length>320){return description.slice(0, 320) + '...'}

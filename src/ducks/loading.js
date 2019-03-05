@@ -16,11 +16,10 @@ const initialState = null
 
 // reducer function
 export default function loadingReducer(state = initialState, action) {
-  console.log('...loading state...', state)
-  console.log('...loading action...', action)
-  if (action.type.indexOf('redux') < 0) {
-    console.log('found one...', action.type.indexOf('redux'));
-    return true;
+
+  if (action.type.indexOf('_PENDING') > 0) {
+    console.log('loading...', action.type.indexOf('_PENDING'));
+    return 'loading';
   } else {
     console.log('NOT LOADING...', action.type)
     return null;

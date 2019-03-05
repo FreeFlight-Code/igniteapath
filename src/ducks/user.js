@@ -1,4 +1,4 @@
-// import axios from 'axios';
+import axios from 'axios';
 
 // Set up initial state
 const initialState = {
@@ -7,25 +7,31 @@ const initialState = {
 
 // action types
 const GET_USER_INFO = 'GET_USER_INFO';
+const TEST = 'TEST';
 
 // action creators
 export function getUserInfo() {
-    // const userInfo = axios.get('/auth/me').then( res => {
-    //     return res.data
-    // })
-    const userInfo = {first:'david', last:'fischer', priv:'admin'}
+    const userInfo = axios.get('/auth/me').then( res => {
+        return res.data
+    })
     return {
         type: GET_USER_INFO,
         payload: userInfo
     }
 }
+export function test() {
+    return {
+        type: TEST
+    }
+}
 
 // reducer function
 export default function userReducer(state = initialState, action) {
-  console.log('...user action...', action)
     switch (action.type) {
         case GET_USER_INFO + '_FULFILLED':
-            return Object.assign({}, ...state, action.payload );
+          return Object.assign({}, ...state, action.payload );
+        case TEST:
+          return {first: 'david', last: 'fischer', priv: 'user', isLoggedIn: true};
         default:
             return state;
     }

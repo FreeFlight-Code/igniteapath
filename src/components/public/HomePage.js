@@ -9,7 +9,7 @@ export default class Home extends Component {
 
         return (
             <div className='HomeContainer'>
-                < Header loggedin={this.props.loggedin} />
+                < Header />
                 <div className='banner'>
                   <h1>EVOLVE YOUR MARRIAGE</h1>
                   <h5>Transform a Lonely, Unloving and Unhappy Marriage into a Passionate, Fulfilling, and Thriving Marriage.</h5>

@@ -5,10 +5,6 @@ import LeftMenu from '../sub/leftMenu';
 import './Account.css';
 
 class Account extends Component {
-    // constructor(props) {
-    //     super(props);
-
-    // }
 
     render() {
 
@@ -28,6 +24,7 @@ class Account extends Component {
 
 const mapStateToProps = (state) => {
     return {
+
     }
 }
 
