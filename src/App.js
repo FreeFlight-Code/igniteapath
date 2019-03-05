@@ -26,7 +26,7 @@ class App extends Component {
           <Route render={props => <Login {...props} loggedin={this.state.loggedin} />} path='/login' />
           <Route render={props => <Blog {...props} loggedin={this.state.loggedin} />} path='/blog' />
           <Route render={props=><Home {...props} loggedin={this.state.loggedin}/>} path='/' exact />
-          <Route component={ Unauthorized } path='/unauthorized' />
+          <Route render={props => <Unauthorized {...props} />} path='/unauthorized' />
           <Route render={props=>this.state.loggedin ? <Secure {...props} loggedin={this.state.loggedin}/> : <Unauthorized/>} path='/secure' />
           <Route component={ FourOhFour } path='/' />
         </Switch>
