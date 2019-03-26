@@ -2,11 +2,12 @@ import axios from 'axios';
 
 // Set up initial state
 const initialState = {
-    name:'toto'
+
 };
 
 // action types
 const GET_USER_INFO = 'GET_USER_INFO';
+const IS_LOGGED_IN = 'IS_LOGGED_IN';
 const TEST = 'TEST';
 
 // action creators
@@ -19,9 +20,15 @@ export function getUserInfo() {
         payload: userInfo
     }
 }
-export function test() {
+export function testuser() {
     return {
         type: TEST
+    }
+}
+export function isLoggedIn() {
+    return {
+        type: IS_LOGGED_IN,
+        payload: true
     }
 }
 

@@ -12,9 +12,9 @@ class Secure extends Component {
 
 
   componentWillMount(){
-    const auth = this.props.user.priv;
-    if (auth === 'admin') window.location = '/#/secure/admin';
-    else if (auth === 'user') window.location = '/#/secure/account';
+// if user has 'user' or 'admin' priv continue
+    const location = window.location.href;
+    if (this.props.user.priv === "user" || this.props.user.priv === "admin") window.location.assign(location);
     else window.location = '/#/unauthorized'
   }
 

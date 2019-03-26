@@ -10,17 +10,19 @@
   --background: var(--primary);
   --black: #020402;
   --red: #AF3236;
+
   --text-primary: #020402;
   --text-secondary: white;
-  --text-primary-hover: rgb(54, 54, 54);
+  --text-primary-hover: rgb(90, 90, 90);
   --text-secondary-hover: #b9b9b9;
+
   --primary: whitesmoke;
-  --primary-hover: rgba(192, 192, 192, 0.8);
   --secondary: rgb(109, 11, 11);
+  --primary-hover: rgba(192, 192, 192, 0.8);
   --secondary-hover: rgb(100, 41, 41);
+
   --header-color: rgb(163, 163, 163);
-  --header-height: 60px;
-  --footer-height: 40px;
+
 }
 
 /************          Global Styling         ***************/
@@ -59,6 +61,9 @@ button:hover, li:hover, input[type='submit']{
 }
 h1, h2, h3, h4, h5, h6, h7 {
   text-align: center;
+}
+p{
+  margin: 0;
 }
 /************          Styling for custom components         ***************/
 

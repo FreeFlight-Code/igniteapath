@@ -26,7 +26,9 @@ export default class Home extends Component {
                   </p>
                 </div>
                 <div className='subscribe'>
+                <p>
                   Subscribe to My Thriving Wives Newletter
+                </p>
                 </div>
                 <div className='testimonial'>
                   <h3>What Other Thriving Wives Are Saying</h3>

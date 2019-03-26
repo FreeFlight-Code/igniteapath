@@ -9,6 +9,7 @@ class Header extends Component {
 
   render() {
     const { isLoggedIn } = this.props.user;
+    console.log(isLoggedIn)
       return (
           <div className='HeaderContainer'>
             <img className='logo' alt='igniteapath logo' src={logo}></img>
@@ -16,10 +17,10 @@ class Header extends Component {
                 menu={[
                     {title:"about", link:"/#/about"},
                     {title:'new? start here', link:'/#/'},
-                    {isLoggedIn} ? {title:"my paths", link:"/#/secure/account/paths"} : {title:"masterclasses", link:"/#/paths"},
+                    // {isLoggedIn ? {title:"my paths", link:"/#/secure/account/paths"} : {title:"masterclasses", link:"/#/paths"}},
                     {title:'blog', link:'/#/blog'},
                     { title: 'contact', link: '/#/contact'},
-                    {isLoggedIn} ? { title: "my account", link: "/#/secure/account" } : { title: "login", link: "/#/login" }
+                    // {isLoggedIn} ? { title: "my account", link: "/#/secure/account" } : { title: "login", link: "/#/login" }
                 ]}
             />
           </div>

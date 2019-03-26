@@ -11,14 +11,14 @@ import Blog from './components/public/BlogPage';
 import Unauthorized from './components/public/UnauthorizedPage';
 import FourOhFour from './components/public/FourOhFourPage';
 
-import { test } from './ducks/user';
+import { isLoggedIn } from './ducks/user';
 
 
 class App extends Component {
 
-    componentDidMount(){
-      this.props.test();
-    }
+    // componentDidMount(){
+    //   this.props.isLoggedIn();
+    // }
 
   render() {
     return (
@@ -46,7 +46,7 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = {
-  test
+  isLoggedIn
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

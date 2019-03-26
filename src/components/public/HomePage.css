@@ -11,6 +11,7 @@
 .HomeContainer .banner h1, .HomeContainer .banner h5{
   position: relative;
   top: 50%;
+  text-shadow: 1px 1px 2px black, 0 0 25px gray, 0 0 5px rgb(58, 58, 58);
 }
 .HomeContainer .aboutme, .HomeContainer .subscribe, .HomeContainer .testimonial{
   padding: 10vw 10vw;
@@ -32,10 +33,15 @@
   background-position: 0% 50%;
   background-attachment: fixed;
 }
+.HomeContainer p{
+    background-color: rgba(5, 5, 5, .5);
+    padding: 9px;
+    text-shadow: 1px 1px 2px black, 0 0 25px gray, 0 0 5px rgb(56, 56, 56);
+}
 .HomeContainer .subscribe{
   font-size: 19px;
   background-image: url('../../images/katie_couple.jpg');
-  background-position: 25% 15%;
+  background-position: 30% 15%;
   background-size: cover;
   background-attachment: fixed;
   height: 50vh;
@@ -47,7 +53,7 @@
 }
 .HomeContainer .cardContainer{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 .HomeContainer .cardContainer .card .pic{
   border-radius: 50%;

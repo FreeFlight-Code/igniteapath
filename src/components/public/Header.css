@@ -1,5 +1,5 @@
 .HeaderContainer{
-    color: var(--text-primary);
+    background-color: var(--header-color);
     position: relative;
     padding: 25px 15px 10px;
 }
