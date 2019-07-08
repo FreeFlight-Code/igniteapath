@@ -34,7 +34,7 @@ class Paths extends Component {
         const pathsList = paths.map((el, i)=>{
             return (
                 <div
-                    className='pathContainer'
+                    className='pathCard'
                     key={`path-${i}`}
                     onClick={e=>{
                         e.preventDefault();
@@ -42,14 +42,13 @@ class Paths extends Component {
                     }}
                 >
                     <img
-                        src={el.thumbnail}
-                        alt={`path ${el.title} Thumbnail`}
+                      className='image'
+                      src={el.thumbnail}
+                      alt={`path ${el.title} Thumbnail`}
                     ></img>
-                    <div className='descriptionContainer'>
-                        <h3>{el.title.toUpperCase()}</h3>
-                        <p>{this.clipDescription(el.description)}</p>
-                        <p>{`$${el.price}`}</p>
-                    </div>
+                    <div className='title'>{el.title.toUpperCase()}</div>
+                    <div className='price'>{`$${el.price}`}</div>
+                    <div className='description'>{this.clipDescription(el.description)}</div>
                 </div>
             )
         })

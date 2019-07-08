@@ -28,10 +28,11 @@ class PathDetail extends Component {
         return el.id === this.props.match.params.id
       })[0];
         return (
-            <div id = 'PathDetailContainer' style={{ backgroundImage: `url(${path.thumbnail})` }}>
-                <span className='close' onClick={_=>{window.location.assign('/#/paths')}}>X</span>
-                <h1>{path.title}</h1>
-                <p>{path.description}</p>
+            <div id = 'PathDetailContainer'>
+              <div className='backgroundImage' style={{ backgroundImage: `url(${path.thumbnail})` }}></div>
+              <span className='close' onClick={_ => { window.location.assign('/#/paths') }}>&lsaquo; Go Back </span>
+              <h1>{path.title}</h1>
+              <p>{path.description}</p>
             </div>
         );
     }
