@@ -29,6 +29,7 @@
 
 html, body{
   color: var(--text-primary);
+  font-size: 14px;
 }
 ul{
   display: inline;
@@ -56,7 +57,7 @@ a, li{
 :visited{
   color: var(--text-primary);
 }
-button:hover, li:hover, input[type='submit']{
+button:hover, li:hover, input[type='submit']:hover{
   cursor: pointer;
 }
 h1, h2, h3, h4, h5, h6, h7 {
