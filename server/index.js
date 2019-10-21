@@ -1,5 +1,6 @@
 require('dotenv').config();
 const host = process.env.BASE_URL;
+let port = process.env.BE_PORT;
 
 const express = require('express')
     , bodyParser = require('body-parser')
@@ -77,12 +78,13 @@ app.delete('/api/course/:id', api.deleteCourse);
 //user queries
 
 
-//*********************       LOGIN/AUTH ENDPOINTS       **********************************8 */
+//*********************       LOGIN/AUTH ENDPOINTS       ***********************************/
+
 app.get('/auth', passport.authenticate('auth0'));
 
 app.get('/auth/callback', passport.authenticate('auth0', {
-  successRedirect: `${process.env.LOCALHOST}/#/browsing`,
-  failureRedirect: `${process.env.LOCALHOST}/#/`
+  successRedirect: `${host}/#/browsing`,
+  failureRedirect: `${host}/#/`
 }))
 
 passport.serializeUser(function(user, done) {
@@ -107,9 +109,8 @@ app.get('/auth/me', (req, res, next) => {
 
 app.get('/auth/logout', (req, res) => {
   req.logOut();
-  return res.redirect(302, process.env.LOCALHOST);
+  return res.redirect(302, host);
 })
-let port = process.env.BE_PORT;
 
 app.listen(port, () => {
     console.log(`Listening on port: ${port}`);
