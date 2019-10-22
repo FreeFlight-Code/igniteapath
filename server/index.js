@@ -32,7 +32,9 @@ massive({
   ssl: true
 }).then( db => {
   app.set('db', db);
+  // console.log(db)
 })
+
 
 passport.use(new Auth0Strategy({
   domain: process.env.AUTH_DOMAIN,
@@ -42,8 +44,8 @@ passport.use(new Auth0Strategy({
 }, function(accessToken, refreshToken, extraParams, profile, done) {
 
   const db = app.get('db');
+console.log('*********  PROFILE  *******', profile)
 
-  db.db_create();
   db.singleUser([ profile.identities[0].user_id ])
   .then( user => {
    if ( user[0] ) {
@@ -56,12 +58,11 @@ passport.use(new Auth0Strategy({
      .then( user => {
         return done( null, { id: user[0].id } );
      })
-
    }
   })
-
-
 }));
+
+
 /*******************************************************************************
  *
  *      MY ENDPOINTS RESTFUL
@@ -75,6 +76,7 @@ app.get('/api/course/:id', api.singleCourse);
 app.post('/api/course', api.createCourse);
 app.put('/api/course', api.editCourse);
 app.delete('/api/course/:id', api.deleteCourse);
+
 //user queries
 
 
@@ -94,7 +96,6 @@ passport.serializeUser(function(user, done) {
 passport.deserializeUser(function(obj, done) {
   app.get('db').singleUser([obj.id])
   .then( user => {
-    // console.log(user)
     return done(null, user[0]);
   })
 });
